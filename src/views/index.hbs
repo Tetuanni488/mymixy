@@ -1,0 +1,70 @@
+<marquee class="whts-new" direction="left" behavior="side">
+    <div class="whts-new-list">
+        <div class="whts-new-item"><span>BREAKING NEWS: </span>Mono con arma</div>
+        <div class="whts-new-item"><span>BREAKING NEWS: </span>Tio mata a tio</div>
+        <div class="whts-new-item"><span>BREAKING NEWS: </span>Gente madura cerca tuya</div>
+        <div class="whts-new-item"><span>BREAKING NEWS: </span>Atraco en un paki</div>
+    </div>
+</marquee>
+
+{{!-- Recent Posts // New people --}}
+<div id="common-container">
+    <div class="post-form">
+        <form action="/images" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="input-group"> 
+                    <textarea name="description" class="form-control" onkeypress="auto_grow(this)" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="form-group2">
+                <div class="input-group"> 
+                    <input type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
+                </div>
+                <button>
+                    new post
+                </button>
+            </div>
+        </form>
+    </div>
+    <div id="recent-people-list">
+        <header>
+            <h3>Meet new people!</h3>
+        </header>
+    </div>
+</div>
+
+{{!-- Recent Posts --}}
+
+<div id="post-list">
+    <div class="post-item">
+        <header>
+            <h1 class="post-title">Post prueba</h1>
+            <div class="post-buttons">
+                <a class="button-type2">Editar</a>
+                <a class="button-type2">Eliminar</a>
+            </div>
+        </header>
+        <div class="post-text">
+            Hello World🌎!
+        </div>
+    </div>
+    <div class="post-item">
+        <header>
+            <h1 class="post-title">Lorem Ipsum</h1>
+            <div class="post-buttons">
+                <a class="button-type2">Editar</a>
+                <a class="button-type2">Eliminar</a>
+            </div>
+        </header>
+        <div class="post-text">
+            Curabitur ac ultrices arcu, vitae rutrum ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tellus turpis. Fusce quis rhoncus leo. Integer a efficitur metus. Phasellus mollis nisl vitae neque pellentesque, id elementum urna gravida. Aenean laoreet vulputate nunc vitae porta. Nulla eu bibendum neque. Donec interdum accumsan libero, ut venenatis metus euismod posuere. Fusce non porta est. Ut efficitur a velit quis mollis. Maecenas mollis metus non lacus blandit, at scelerisque diam vehicula. Nam convallis, leo et porta ullamcorper, mi risus consequat odio, vel laoreet est ex sit amet nibh. Praesent nec imperdiet nibh. Duis euismod odio ipsum, vitae varius libero egestas id. Pellentesque dui sem, luctus eget scelerisque sed, fermentum et ipsum.
+        </div>
+    </div>
+</div>
+<script>
+    function auto_grow(element){
+        element.style.height = "50px"
+        element.style.height = `${element.scrollHeight}px`
+    }
+</script>
+
