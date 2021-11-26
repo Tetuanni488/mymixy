@@ -2,6 +2,8 @@ const path = require('path')
 const {randomString} = require("../helpers/libs");
 const fsExtra = require('fs-extra')
 
+const {Image} = require("../models/index");
+
 const controller = {};
 
 controller.index  = (req,res) =>{
@@ -16,7 +18,12 @@ controller.create  = async (req,res) =>{
 
     if(ext ==='.png' || ext === '.jpeg' || ext === '.jpg' || ext === '.gif'){
         await fsExtra.rename(tempPath,targetPath);
-        res.send("recibido "+url)
+        const newImg = new Image({
+            title: req.body.title,
+            descipcion: req.body.descipcion,
+            filename: imageUrl+ext,
+        })
+        console.log(newImg)
     }
 };
 
