@@ -19,7 +19,7 @@ controller.create  = async (req,res) =>{
     if(ext ==='.png' || ext === '.jpeg' || ext === '.jpg' || ext === '.gif'){
         await fsExtra.rename(tempPath,targetPath);
         const newImg = new Image({
-            title: req.body.title,
+            // title: req.body.title,
             descipcion: req.body.descipcion,
             filename: imageUrl+ext,
         })
