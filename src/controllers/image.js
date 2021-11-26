@@ -21,7 +21,7 @@ controller.create  = async (req,res) =>{
         const newImg = new Image({
             // title: req.body.title,
             descipcion: req.body.descipcion,
-            filename: imageUrl+ext,
+            filename: url+ext,
         })
         console.log(newImg)
     }
