@@ -20,11 +20,12 @@ controller.create  = async (req,res) =>{
         await fsExtra.rename(tempPath,targetPath);
         const newImg = new Image({
             // title: req.body.title,
-            descipcion: req.body.descipcion,
+            description: req.body.description,
             filename: url+ext,
         })
-        console.log(newImg)
+        // const imageSaved = await newImg.save();
     }
+    res.send("query suseccsly!")
 };
 
 controller.like  = (req,res) =>{
