@@ -1,21 +1,35 @@
+@font-face {
+    font-family: 'LemonMilkBold';
+    src: url('../fonts//LemonMilkBold-gx2B3.otf') 
+        format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LemonMilkRegular';
+    src: url('../fonts//LemonMilkRegular-X3XE2.otf') 
+        format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing:border-box;
     padding:0;
     margin:0;
 }
 
-
-
 body,html{
     height:100%;
 }
 
 body{
-    font-family:Sans-serif;
-    background-color: #193e46;
+    font-family:LemonMilkRegular;
     color:#fff;
-    background-repeat: no-repeat;
+    height:100%;
+    width: 100%;
 }
+
 
 textarea{
     height: 59px;
@@ -29,12 +43,16 @@ textarea::-webkit-scrollbar{
 /*Top navbar*/
 
 nav{
-    background-image: linear-gradient(to top,rgb(50,50,50),rgb(70,70,70));
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #3b041b6b;
     display:flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    padding:15px;
+    padding:10px;
 }
 
 nav #nav-links {
@@ -54,8 +72,12 @@ nav #account-info a{
 }
 
 nav  #account-info a span{
-    font-weight:bold;
-    color:rgb(15,175,200);
+    color:#c52165;
+}
+
+.wrapper{
+    margin: 50px;
+    
 }
 
 .whts-new{
@@ -65,7 +87,6 @@ nav  #account-info a span{
     border-radius:5px;
     margin:50px;
     margin-bottom:0;
-    
 }
 .whts-new-list{
     display: flex;
@@ -82,34 +103,6 @@ nav  #account-info a span{
     color:red;
 }
 
-/*Buttons*/
-
-.button-type1{
-    font-weight:bold;
-    font-size:22px;
-    padding:5px;
-    color:rgb(15,175,200);
-    transition: all .5s;
-    text-decoration: none;
-}
-.button-type1:hover{
-    color:#fff;
-}
-
-.button-type2{
-    font-size:17px;
-    padding:5px;
-    background-color: #ffff;
-    color:rgb(15,175,200);
-    border-radius:5px;
-    transition: all .5s;
-    text-decoration: none;
-}
-.button-type2:hover{
-    background-color:#656565;
-    color:#ffff;
-}
-
 /*Posts*/
 
 #post-list{
@@ -118,66 +111,3 @@ nav  #account-info a span{
     margin: 50px;
     margin-top: 20px;
 }
-
-
-/* *{
-    box-sizing: border-box;
-}
-body{
-    margin: 0px;
-    padding: 0px;
-    color: #000;
-} */
-
-/* navbar */
-
-/* .navbar{
-    position: relative;
-    overflow: hidden;
-    background-color: #ffff;
-    box-shadow: 0px 1px 10px #00000063;
-    justify-content: center;
-    
-}
-
-#left-side-navbar{
-    align-items: flex-end;
-    width: 10%;
-    height: 100%;
-}
-#top-side-navbar{
-    width: 100%;
-    height: 5%;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: center;
-}
-.navbar .menu-icon{
-    padding: 10px;
-    border-radius: 45px;
-    
-}
-.navbar .menu-icon a{
-    font-size: 2.5vh;
-    font-weight: bolder;
-    text-decoration: none;
-    border: none;
-    color:#777777;
-    transition: 0.2s;
-}
-.navbar .menu-icon a:hover{
-    color: #ff7373;
-} */
-
-/* center-area */
-
-/* .center-area{
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-} */
-

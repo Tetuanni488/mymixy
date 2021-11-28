@@ -11,10 +11,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="../../public/css/app.css">
+        <link rel="stylesheet" href="../../public/css/base.css">
         <link rel="stylesheet" href="../../public/css/profile.css">
         <link rel="stylesheet" href="../../public/css/post.css">
     </head>
-    <body>
+    <body class="bg-gradient">
         <nav>
             <div id="nav-links">
                 <a href="/" class="button-type1">Explore</a>
@@ -27,7 +28,10 @@
             </div>
         </nav>
 
-        {{{ body }}}
-        
+        <div class="bg-gradient">
+            <div class="wrapper">
+                {{{ body }}}
+            </div>
+        </div>
     </body>
 </html>

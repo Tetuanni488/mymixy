@@ -1,0 +1,42 @@
+/* Background */
+.bg-gradient{
+    background-image: linear-gradient(to bottom, #1d0011, #16000e);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.bg2-color{
+    background-color:#331923;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Buttons*/
+.button-type1{
+    font-family: LemonMilkRegular;
+    font-size:17px;
+    padding:5px;
+    color:#c52165;
+    transition: all .5s;
+    text-decoration: none;
+}
+.button-type1:hover{
+    color:#fff;
+}
+
+.button-type2{
+    font-size:17px;
+    padding:5px;
+    background-color: #ffff;
+    color:#0fafc8;
+    border-radius:5px;
+    transition: all .5s;
+    text-decoration: none;
+}
+.button-type2:hover{
+    background-color:#656565;
+    color:#ffff;
+}
