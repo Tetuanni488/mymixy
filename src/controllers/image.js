@@ -1,5 +1,6 @@
 const path = require('path')
 const {randomString} = require("../helpers/libs");
+const {getClientIp} = require("../helpers/libs");
 const fsExtra = require('fs-extra')
 
 const {Image} = require("../models/index");
@@ -25,6 +26,7 @@ controller.create  = (req,res) =>{
                 await fsExtra.rename(tempPath,targetPath);
                 const newImg = new Image({
                     title: req.body.title,
+                    author: req.body.author,
                     description: req.body.description,
                     filename: url+ext,
                 })

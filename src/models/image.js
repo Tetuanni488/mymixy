@@ -4,6 +4,7 @@ const path = require("path");
 
 const ImageSchema = new Schema({
     title:{type: String},
+    author:{type: String},
     description:{type: String},
     filename: {type: String},
     views:{type: Number, default:0},
