@@ -47,12 +47,13 @@ nav{
     top: 0;
     right: 0;
     width: 100%;
-    background-color: #3b041b6b;
+    background-color: #131313;
     display:flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
     padding:10px;
+    z-index: 1;
 }
 
 nav #nav-links {
@@ -75,17 +76,11 @@ nav  #account-info a span{
     color:#c52165;
 }
 
-.wrapper{
-    margin: 50px;
-    
-}
-
 .whts-new{
     color:#000;
     background-color:#fff;
     padding:5px;
     border-radius:5px;
-    margin:50px;
     margin-bottom:0;
 }
 .whts-new-list{
@@ -105,9 +100,7 @@ nav  #account-info a span{
 
 /*Posts*/
 
-#post-list{
+.post-list{
     display: flex;
     flex-direction: column;
-    margin: 50px;
-    margin-top: 20px;
 }

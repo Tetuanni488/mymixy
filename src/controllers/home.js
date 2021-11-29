@@ -1,7 +1,9 @@
 const controller = {};
+const {Image} =  require("../models");
 
-controller.index =  (req, res) => { 
-    res.render('index')
+controller.index =  async(req, res) => {
+    const images = await Image.find().sort({timestamp:-1}).lean(); 
+    res.render('index',{images})
 }
 controller.profile =  (req, res) => { 
     res.render('layouts/profile')

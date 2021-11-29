@@ -1,7 +1,5 @@
 module.exports = {
     database: {
-        URI:'mongodb://localhost/myworld',
-
-
+        URI:'mongodb://localhost/mymixy',
     }
 }

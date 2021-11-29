@@ -1,4 +1,4 @@
-<marquee class="whts-new" direction="left" behavior="side">
+<marquee class="mrl-50 mt-20 whts-new" direction="left" behavior="side">
     <div class="whts-new-list">
         <div class="whts-new-item"><span>BREAKING NEWS: </span>Mono con arma</div>
         <div class="whts-new-item"><span>BREAKING NEWS: </span>Tio mata a tio</div>
@@ -8,15 +8,18 @@
 </marquee>
 
 {{!-- Recent Posts // New people --}}
-<div id="common-container">
+<div id="common-container" class="mrl-50 mt-20">
     <div class="post-form bg2-color">
         <form action="/images" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <div class="input-group"> 
+                    <input name="title" class="form-control" required>
+                </div>
+                <div class="input-group"> 
                     <textarea name="description" class="form-control" onkeypress="auto_grow(this)" rows="2"></textarea>
                 </div>
             </div>
-            <div class="form-group2">
+            <div class="form-group">
                 <div class="input-group"> 
                     <input type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
                 </div>
@@ -35,32 +38,26 @@
 
 {{!-- Recent Posts --}}
 
-<div id="post-list">
-    <div class="post-item bg2-color">
-        <header>
-            <h1 class="post-title">Post prueba</h1>
-            <div class="post-buttons">
-                <a class="button-type2">Editar</a>
-                <a class="button-type2">Eliminar</a>
+
+<div class="m-50 mt-20">
+    <h2 class="tl-1">Recent posts</h2>
+    <div class="mt-20 row-list">
+        {{#each images}}
+            <div class="bg2-color br-10 p-25 mt-20">
+                <header>
+                    <h3 class="m-20">{{title}}</h2>
+                </header>
+                <a href="">
+                    <img src="/public/upload/{{filename}}" alt="" style="width: 100%;" class="br-10">
+                </a>
+                <div class="mt-20 p-15 br-10 bg3-color">
+                    {{description}}
+                </div>
             </div>
-        </header>
-        <div class="post-text">
-            Hello World🌎!
-        </div>
-    </div>
-    <div class="post-item bg2-color">
-        <header>
-            <h1 class="post-title">Lorem Ipsum</h1>
-            <div class="post-buttons">
-                <a class="button-type2">Editar</a>
-                <a class="button-type2">Eliminar</a>
-            </div>
-        </header>
-        <div class="post-text">
-            Curabitur ac ultrices arcu, vitae rutrum ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tellus turpis. Fusce quis rhoncus leo. Integer a efficitur metus. Phasellus mollis nisl vitae neque pellentesque, id elementum urna gravida. Aenean laoreet vulputate nunc vitae porta. Nulla eu bibendum neque. Donec interdum accumsan libero, ut venenatis metus euismod posuere. Fusce non porta est. Ut efficitur a velit quis mollis. Maecenas mollis metus non lacus blandit, at scelerisque diam vehicula. Nam convallis, leo et porta ullamcorper, mi risus consequat odio, vel laoreet est ex sit amet nibh. Praesent nec imperdiet nibh. Duis euismod odio ipsum, vitae varius libero egestas id. Pellentesque dui sem, luctus eget scelerisque sed, fermentum et ipsum.
-        </div>
+        {{/each}}
     </div>
 </div>
+
 <script>
     function auto_grow(element){
         element.style.height = "50px"

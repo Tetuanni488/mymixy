@@ -1,42 +1,72 @@
 /* Background */
-.bg-gradient{
-    background-image: linear-gradient(to bottom, #1d0011, #16000e);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+.bg-color{
+    background-color: #131313;
 }
 
 .bg2-color{
-    background-color:#331923;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color:#2b2b2b;
+}
+
+.bg3-color{
+    background-color:#383838;
 }
 
 /*Buttons*/
-.button-type1{
+.bttn-1{
     font-family: LemonMilkRegular;
     font-size:17px;
     padding:5px;
-    color:#c52165;
+    color:#c5214a;
     transition: all .5s;
     text-decoration: none;
 }
-.button-type1:hover{
+.bttn-1:hover{
     color:#fff;
 }
 
-.button-type2{
+.bttn-2{
     font-size:17px;
     padding:5px;
-    background-color: #ffff;
-    color:#0fafc8;
+    background-color: #c5214a;
+    color:#ffff;
     border-radius:5px;
     transition: all .5s;
     text-decoration: none;
 }
-.button-type2:hover{
+.bttn-2:hover{
     background-color:#656565;
     color:#ffff;
+}
+
+/* Titles */
+.tl-1{
+
+}
+
+/* Margins&Paddings */
+.mrl-50{
+    margin: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.m-50{
+    margin: 50px;
+}
+.m-20{
+    margin: 20px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.p-25{
+    padding: 25px;
+}
+.p-15{
+    padding: 15px;
+}
+
+/* Border */
+
+.br-10{
+    border-radius: 10px;
 }
