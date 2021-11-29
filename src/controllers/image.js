@@ -8,7 +8,7 @@ const {Image} = require("../models/index");
 const controller = {};
 
 controller.index  = (req,res) =>{
-
+    res.render("image");
 };
 
 controller.create  = (req,res) =>{
