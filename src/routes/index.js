@@ -7,7 +7,7 @@ module.exports = app =>{
 
     router.get('/', home.index)
     router.get('/profile', home.profile)
-    router.get('/images/:imgae_id', home.index)
+    router.get('/images/:image_id', home.index)
     router.post('/images', image.create)
     router.post('/images/:image_id/like', image.like)
     router.post('/images/:image_id/comment', image.comment)
