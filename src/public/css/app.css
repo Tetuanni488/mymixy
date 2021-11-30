@@ -40,6 +40,14 @@ textarea::-webkit-scrollbar{
     width: 0px;
 }
 
+.wrapper{
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+    grid-template-columns: 70% 30%;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
 /*Top navbar*/
 
 nav{
@@ -56,11 +64,11 @@ nav{
     z-index: 1;
 }
 
-nav #nav-links {
+nav .nav-links {
     padding:5px;
 }
 
-nav #account-info {
+nav .account-info {
     display:flex;
     flex-direction: row;
     font-size:17px;
@@ -68,11 +76,11 @@ nav #account-info {
     color:rgb(255,255,255);
 }
 
-nav #account-info a{
+nav .account-info a{
     margin-right:10px;
 }
 
-nav  #account-info a span{
+nav .account-info a span{
     color:#c52165;
 }
 
@@ -82,6 +90,7 @@ nav  #account-info a span{
     padding:5px;
     border-radius:5px;
     margin-bottom:0;
+    height: max-content;
 }
 .whts-new-list{
     display: flex;

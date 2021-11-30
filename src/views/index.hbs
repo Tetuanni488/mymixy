@@ -1,4 +1,4 @@
-<marquee class="mrl-50 mt-20 whts-new" direction="left" behavior="side">
+<marquee class="whts-new content-fullrow-1" direction="left" behavior="side">
     <div class="whts-new-list">
         <div class="whts-new-item"><span>BREAKING NEWS: </span>Mono con arma</div>
         <div class="whts-new-item"><span>BREAKING NEWS: </span>Tio mata a tio</div>
@@ -8,43 +8,44 @@
 </marquee>
 
 {{!-- Recent Posts // New people --}}
-<div id="common-container" class="mrl-50 mt-20">
-    <div class="post-form bg2-color">
-        <form action="/images" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <div class="input-group"> 
-                    <input name="author" class="form-control"  placeholder="Author" required>
-                </div>
-                <div class="input-group"> 
-                    <input name="title" class="form-control" placeholder="Title here" required>
-                </div>
-                <div class="input-group"> 
-                    <textarea name="description" class="form-control" placeholder="Description here" onkeypress="auto_grow(this)" rows="2"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="input-group"> 
-                    <input type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
-                </div>
-                <button>
-                    new post
-                </button>
-            </div>
-        </form>
-    </div>
-    <div id="recent-people-list" class="bg2-color">
-        <header>
-            <h3>Meet new people!</h3>
-        </header>
-    </div>
+
+<div class="recent-people-list bg2-color content-column-2-right w-30">
+    <header>
+        <h3>Meet new people!</h3>
+    </header>
 </div>
+
+<div class="post-form card bg2-color content-column-2 w-100">
+    <form action="/images" method="POST" enctype="multipart/form-data">
+        <div class="input-group-1">
+            <div class="input-group"> 
+                <input class="input-1 bg2-color" name="author" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Author" required>
+            </div>
+            <div class="input-group"> 
+                <input class="input-1 bg2-color" name="title" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Title here" required>
+            </div>
+            <div class="input-group"> 
+                <textarea class="tarea-1 bg2-color" name="description" class="form-control" placeholder="Description here" onkeypress="auto_grow(this)" rows="2"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group"> 
+                <input type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
+            </div>
+            <button>
+                new post
+            </button>
+        </div>
+    </form>
+</div>
+
 
 {{!-- Recent Posts --}}
 
 
-<div class="m-50 mt-20">
+<div class="content-column-3 w-100">
     <h2 class="tl-1">Recent posts</h2>
-    <div class="mt-20 row-list">
+    <div class="row-list">
         {{#each images}}
             <div class="bg2-color br-10 p-25 mt-20">
                 <header>

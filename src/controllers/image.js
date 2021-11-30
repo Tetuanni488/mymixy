@@ -7,8 +7,9 @@ const {Image} = require("../models/index");
 
 const controller = {};
 
-controller.index  = (req,res) =>{
-    res.render("image");
+controller.index  = async (req,res) =>{
+    const image = await Image.findOne({filename:{$regex: req.params.image_id}}).lean();
+    res.render("image",{image});
 };
 
 controller.create  = (req,res) =>{
