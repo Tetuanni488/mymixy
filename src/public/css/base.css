@@ -84,15 +84,16 @@
 .card{
     padding: 15px;
     border-radius: 10px;
+    width: 100%;
 }
 
 /* Width&Height */
 
 .w-100{
-    width: 100%;
+    width: 100% !important;
 }
 .w-30{
-    width: 30%;
+    width: 30% !important;
 }
 
 /* Input */

@@ -68,7 +68,7 @@ nav .nav-links {
     padding:5px;
 }
 
-nav .account-info {
+nav .nav-account-info {
     display:flex;
     flex-direction: row;
     font-size:17px;
@@ -76,11 +76,11 @@ nav .account-info {
     color:rgb(255,255,255);
 }
 
-nav .account-info a{
+nav .nav-account a{
     margin-right:10px;
 }
 
-nav .account-info a span{
+nav .nav-account a span{
     color:#c52165;
 }
 
@@ -107,7 +107,7 @@ nav .account-info a span{
     color:red;
 }
 
-/*Posts*/
+/*Defined card*/
 
 .post-list{
     display: flex;
