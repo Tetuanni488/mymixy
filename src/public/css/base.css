@@ -134,10 +134,6 @@
     grid-column-end:2;
 }
 
-input:autofill {
-    text-fill-color: #ffff;
-    box-shadow: none;
-}
 input:-webkit-autofill {
     -webkit-text-fill-color: #ffff;
     -webkit-box-shadow: none;
