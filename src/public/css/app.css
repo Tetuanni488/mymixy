@@ -24,7 +24,7 @@ body,html{
 }
 
 body{
-    font-family:LemonMilkRegular;
+    font-family:sans-serif;
     color:#fff;
     height:100%;
     width: 100%;
@@ -54,6 +54,7 @@ nav{
     position: fixed;
     top: 0;
     right: 0;
+    font-family:LemonMilkRegular;
     width: 100%;
     background-color: #131313;
     display:flex;
@@ -68,7 +69,7 @@ nav .nav-links {
     padding:5px;
 }
 
-nav .account-info {
+nav .nav-account-info {
     display:flex;
     flex-direction: row;
     font-size:17px;
@@ -76,11 +77,11 @@ nav .account-info {
     color:rgb(255,255,255);
 }
 
-nav .account-info a{
+nav .nav-account a{
     margin-right:10px;
 }
 
-nav .account-info a span{
+nav .nav-account a span{
     color:#c52165;
 }
 
@@ -107,7 +108,7 @@ nav .account-info a span{
     color:red;
 }
 
-/*Posts*/
+/*Defined card*/
 
 .post-list{
     display: flex;
