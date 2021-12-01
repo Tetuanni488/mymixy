@@ -9,9 +9,5 @@ helpers.randomString = () => {
     }
     return ranString
 }
-helpers.style.autoGrow = (element) =>{
-    element.style.height = "50px"
-    element.style.height = `${element.scrollHeight}px`
-}
 
 module.exports = helpers

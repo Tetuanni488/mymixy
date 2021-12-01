@@ -15,6 +15,12 @@
     background-color:#ffffff;
 }
 
+/* Text */
+
+.text-rossa{
+    color:#c5214a;
+}
+
 /*Buttons*/
 
 .bttn{
@@ -22,12 +28,16 @@
     border: none;
     font-size: 20px;
     border-radius: 5px;
-    background: #656565 ;
+    padding: 5px;
+    background: #ffffff;
+    font-weight: bold;
+    color:#c5214a;
+    transition: all 0.3s;
 }
-.bttn-1:hover{
+.bttn:hover{
     outline: none;
     border: none;
-    color:#fff;
+    background-color: #a7a7a7;
 }
 
 .bttn-1{
@@ -57,7 +67,8 @@
 
 /* Titles */
 .tl-1{
-
+    padding: 5px;
+    border-bottom: #c5214a solid 2px;
 }
 
 /* Margins&Paddings */
@@ -111,7 +122,6 @@
 }
 .card-2{
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -167,6 +177,12 @@
 }
 .content-row3{
     grid-row-start: 3;
+}
+.gap-col10{
+    column-gap:10px;
+}
+.gap-row10{
+    row-gap:10px;
 }
 
 /* Position, flex direccion, align items, jstuify content */

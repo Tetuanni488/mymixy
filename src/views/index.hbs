@@ -1,7 +1,7 @@
 {{!-- Recent Posts // New people --}}
-<div class="post-form card bg1-color content-medium content-row1 w-100">
+<div class="post-form card-2 flex-dir-col content-medium content-row1 w-100">
     <h2 class="tl-1">Create new post</h2>
-    <form action="/images" method="POST" enctype="multipart/form-data">
+    <form class="card-2 flex-dir-col" action="/images" method="POST" enctype="multipart/form-data">
         <div class="input-group-1">
             <div class="input-group"> 
                 <input class="input-1 bg2-color" name="author" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Author" required>
@@ -10,10 +10,10 @@
                 <input class="input-1 bg2-color" name="title" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Title here" required>
             </div>
             <div class="input-group"> 
-                <textarea class="tarea-1 bg2-color" name="description" class="form-control" placeholder="Description here" onkeypress="auto_grow(this)" rows="2"></textarea>
+                <textarea class="tarea-1 bg2-color" name="description" class="form-control" placeholder="Description here" onkeypress="autoGrow(this)" rows="2"></textarea>
             </div>
         </div>
-        <div class="form-group-bttns">
+        <div class="form-group-bttns card-2 justify-con-sBetween">
             <div class="input-group"> 
                 <input class="bttn bg-trans" type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
             </div>
@@ -30,12 +30,11 @@
 
 <div class="content-medium w-100 content-row2">
     <h2 class="tl-1">Recent posts</h2>
-    <div class="row-list">
+    <div class="card-2 flex-dir-col">
         {{#each images}}
             <div class="card-2 flex-dir-col p-25">
-                <header>
-                    <h3>{{title}} by {{author}}</h2>
-                </header>
+                <h3>{{title}}</h3>
+                <h4><span class="text-rossa">Author:</span> {{author}}</h4>
                 <div class="br-10">
                     {{description}}
                 </div>
@@ -46,11 +45,4 @@
         {{/each}}
     </div>
 </div>
-
-<script>
-    function auto_grow(element){
-        element.style.height = "50px"
-        element.style.height = `${element.scrollHeight}px`
-    }
-</script>
 
