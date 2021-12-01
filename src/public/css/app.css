@@ -99,3 +99,12 @@ nav .nav-account a span{
     display: flex;
     flex-direction: column;
 }
+
+
+/*Media width*/
+
+@media screen and (max-width:1080px) {
+    .wrapper{
+        margin: 0px !important;
+    }
+}

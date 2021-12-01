@@ -16,9 +16,6 @@
 .post-item .post-buttons{
     padding:5px;
 }
-.post-item .post-buttons .button-type2{
-    margin-right:10px;
-}
 
 .post-item .post-text{
     font-weight:bold;
@@ -45,8 +42,6 @@
     flex-direction: column;
     gap: 10px;
 }
-
-.post-form .input-group-1 .input-group{
-    padding: 5px;
+.post-form .form-group-bttns{
+    width: fit-content;
 }
-
