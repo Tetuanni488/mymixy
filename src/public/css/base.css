@@ -4,11 +4,11 @@
 }
 
 .bg-color{
-    background-color: #bba7a7;
+    background-color: #15161a;
 }
 
 .bg2-color{
-    background-color:#131313;
+    background-color:#1b1c21;
 }
 
 .bg3-color{
@@ -16,9 +16,22 @@
 }
 
 /*Buttons*/
+
+.bttn{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    background: #656565 ;
+}
+.bttn-1:hover{
+    outline: none;
+    border: none;
+    color:#fff;
+}
+
 .bttn-1{
-    font-family: LemonMilkRegular;
-    font-size:17px;
+    font-size:20px;
     padding:5px;
     color:#c5214a;
     transition: all .5s;
@@ -68,6 +81,9 @@
 .m-200{
     margin: 200px;
 }
+.mt-10{
+    margin-top: 10px;
+}
 
 .mt-100{
     margin-top: 100px !important;
@@ -92,6 +108,11 @@
     padding: 15px;
     border-radius: 10px;
     width: 100%;
+}
+.card-2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 /* Width&Height */
@@ -119,28 +140,68 @@
 
 /* Grid */
 
-.content-fullrow-1{
-    grid-row-start:1;
+.content-large{
     grid-column-start: 1;
     grid-column-end:3;
 }
-.content-column-2{
-    grid-row-start: 2;
+.content-medium{
     grid-column-start: 1;
     grid-column-end:2;
 }
-.content-column-2-right{
-    grid-row-start: 2;
+.content-small{
+    grid-column-start: 1;
+    grid-column-end:2;
+}
+.content-expand-down1{
     grid-row-end: span 2;
+}
+.content-small-force-right{
     grid-column-start: 2;
     grid-column-end:3;
 }
-.content-column-3{
-    grid-row-start: 3;
-    grid-row-end: span 2;
-    grid-column-start: 1;
-    grid-column-end:2;
+.content-row1{
+    grid-row-start: 1;
 }
+.content-row2{
+    grid-row-start: 2;
+}
+.content-row3{
+    grid-row-start: 3;
+}
+
+/* Position, flex direccion, align items, jstuify content */
+
+.pos-fixed{
+    position: fixed;
+}
+.pos-abs{
+    position: absolute;
+}
+.pos-rel{
+    position: relative;
+}
+
+.flex-dir-row{
+    flex-direction: row;
+}
+.flex-dir-col{
+    flex-direction: column;
+}
+.flex-dir-rowr{
+    flex-direction: row-reverse;
+}
+.flex-dir-colr{
+    flex-direction: column-reverse;
+}
+
+.align-itm-center{
+    align-items: center;
+}
+
+.justify-con-sBetween{
+    justify-content: space-between;
+}
+
 
 input:-webkit-autofill {
     -webkit-text-fill-color: #ffff;

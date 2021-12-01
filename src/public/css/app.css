@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'LemonMilkBold';
-    src: url('../fonts//LemonMilkBold-gx2B3.otf') 
-        format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'LemonMilkRegular';
-    src: url('../fonts//LemonMilkRegular-X3XE2.otf') 
-        format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     box-sizing:border-box;
     padding:0;
@@ -54,15 +39,14 @@ nav{
     position: fixed;
     top: 0;
     right: 0;
-    font-family:LemonMilkRegular;
     width: 100%;
-    background-color: #131313;
     display:flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    padding:10px;
+    padding:15px;
     z-index: 1;
+    box-shadow: var(--box-shadow-3);
 }
 
 nav .nav-links {

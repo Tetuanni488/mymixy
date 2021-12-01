@@ -32,7 +32,7 @@ controller.create  = (req,res) =>{
                     filename: url+ext,
                 })
                 const imageSaved = await newImg.save();
-                res.redirect("/images");
+                res.redirect(`/images/${url}`);
             } else {
                 await fs.unlink(tempPath);
                 res.status(500).json({error: 'Only image formats are allowed'})
