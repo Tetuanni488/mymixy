@@ -196,6 +196,9 @@
 .pos-rel{
     position: relative;
 }
+.pos-sticky{
+    position: sticky;
+}
 
 .flex-dir-row{
     flex-direction: row;
@@ -217,6 +220,16 @@
 .justify-con-sBetween{
     justify-content: space-between;
 }
+
+.flex-1{
+    flex: 1;
+}
+
+
+.align-self-start{
+    justify-self: flex-start;
+}
+
 
 
 input:-webkit-autofill {

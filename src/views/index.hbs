@@ -1,38 +1,40 @@
 {{!-- Recent Posts // New people --}}
-<div class="post-form card-2 flex-dir-col content-medium content-row1">
-    <h2 class="tl-1">Create new post</h2>
-    <form class="card-2 flex-dir-col" action="/images" method="POST" enctype="multipart/form-data">
-        <div class="input-group-1">
-            <div class="input-group"> 
-                <input class="input-1 bg2-color" name="author" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Author" required>
-            </div>
-            <div class="input-group"> 
-                <input class="input-1 bg2-color" name="title" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Title here" required>
-            </div>
-            <div class="input-group"> 
-                <textarea class="tarea-1 bg2-color" name="description" class="form-control" placeholder="Description here" onkeypress="autoGrow(this)" rows="2"></textarea>
-            </div>
-        </div>
-        <div class="form-group-bttns card-2 justify-con-sBetween">
-            <div class="input-group"> 
-                <input class="bttn bg-trans" type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
-            </div>
-            <button class="bttn">
-                new post
-            </button>
-        </div>
-    </form>
-</div>
 
 
 {{!-- Recent Posts --}}
 
 
-<div class="content-medium w-100 content-row2">
+<div class="w-100 flex-1 align-self-start">
+    <div class="post-form card-2 flex-dir-col w-100">
+        <h2 class="tl-1">Create new post</h2>
+        <form class="card-2 flex-dir-col" action="/images" method="POST" enctype="multipart/form-data">
+            <div class="input-group-1">
+                <div class="input-group"> 
+                    <input class="input-1 bg2-color" name="author" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Author" required>
+                </div>
+                <div class="input-group"> 
+                    <input class="input-1 bg2-color" name="title" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Title here" required>
+                </div>
+                <div class="input-group"> 
+                    <textarea class="tarea-1 bg2-color" name="description" class="form-control" placeholder="Description here" onkeypress="autoGrow(this)" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="form-group-bttns card-2 justify-con-sBetween">
+                <div class="input-group"> 
+                    <input class="bttn bg-trans" type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
+                </div>
+                <button class="bttn">
+                    new post
+                </button>
+            </div>
+        </form>
+    </div>
+
+
     <h2 class="tl-1">Recent posts</h2>
     <div class="card-2 flex-dir-col">
         {{#each images}}
-            <div class="card-2 flex-dir-col p-25">
+            <div class="card-2 post-wrapper">
                 <h3>{{title}}</h3>
                 <h4><span class="text-rossa">Author:</span> {{author}}</h4>
                 <div class="br-10">
