@@ -1,4 +1,6 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+*
+ {
     box-sizing:border-box;
     padding:0;
     margin:0;
@@ -7,41 +9,23 @@
 * {
     overscroll-behavior: contain;
     overscroll-behavior-block: contain;
-    scroll-boundary-behavior: contain;
+    scroll-behavior: contain;
 }
-
 body,html{
     height:100%;
 }
-
 body{
-    font-family:sans-serif;
+    font-family: "Poppins", sans-serif;
     color:#fff;
     height:100%;
     width: 100%;
 }
-
-
 textarea{
     height: 59px;
     resize: none;
 }
-
 textarea::-webkit-scrollbar{
     width: 0px;
-}
-
-.wrapper{
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1170px;
-    position: sticky;
-    margin: 0 auto;
-    padding-top: 4.25em;
-
 }
 
 /*Top navbar*/
@@ -54,35 +38,28 @@ nav{
     display:flex;
     flex-direction: row;
     justify-content:space-between;
+    padding: 10px;
     align-items: center;
-    padding:15px;
     z-index: 1;
     box-shadow: var(--box-shadow-3);
 }
 
-nav .nav-links {
+nav .nav-bttns-access {
     padding:5px;
 }
-
-nav .nav-account-info {
-    display:flex;
-    flex-direction: row;
-    font-size:17px;
-    padding:5px;
-    color:rgb(255,255,255);
-}
-
-nav .nav-account a{
-    margin-right:10px;
-}
-
-nav .nav-account a span{
-    color:#c52165;
-}
-
-
 
 /*Defined cards*/
+
+.mian-content-wrapper{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    position: sticky;
+    margin: 0 auto;
+    padding-top: 4.25em;
+}
 
 .post-list{
     display: flex;
@@ -96,20 +73,34 @@ nav .nav-account a span{
     width: 30%;
 }
 
-.post-wrapper{
+.post-content-wrapper{
     border-bottom: #c52165 solid 2px;
     flex-direction: column;
     padding: 25px;
     color: #fff;
 }
 
+/* Post porfile */
+
+.postsite-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.postsite-content-wrapper .post-profile{
+    align-items:flex-start;
+}
+.postsite-content-wrapper .post-profile-img {
+    width: 50px;
+    clip-path: circle(50%);
+}
+
 
 /*Media width*/
 
 @media screen and (max-width:1080px) {
-    .wrapper{
+    .mian-content-wrapper{
         margin: 0px !important;
-        grid-template-columns: 100% !important;
     }
 }
 

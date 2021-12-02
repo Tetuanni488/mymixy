@@ -23,14 +23,6 @@
     padding:25px;
     background-color:transparent;
 }
-
-.common-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-}
-
 .post-form{
     border-radius:10px;
     overflow:auto;
