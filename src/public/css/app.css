@@ -19,6 +19,7 @@ body{
     color:#fff;
     height:100%;
     width: 100%;
+    flex: 1;
 }
 textarea{
     height: 59px;
@@ -45,7 +46,9 @@ nav{
 }
 
 nav .nav-bttns-access {
-    padding:5px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
 /*Defined cards*/
@@ -80,12 +83,19 @@ nav .nav-bttns-access {
     color: #fff;
 }
 
+/*Home page*/
+
+.homesite-content-wrapper{
+    width: 70% !important;
+}
+
 /* Post porfile */
 
 .postsite-content-wrapper{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 70%;
 }
 .postsite-content-wrapper .post-profile{
     align-items:flex-start;
@@ -99,8 +109,28 @@ nav .nav-bttns-access {
 /*Media width*/
 
 @media screen and (max-width:1080px) {
+    /* Main Content*/
+
     .mian-content-wrapper{
         margin: 0px !important;
+        flex-direction: column;
+    }
+    .homesite-content-wrapper{
+        width: 100% !important;
+    }
+    .postsite-content-wrapper{
+        width: 100% !important;
+        padding: 20px;
+    }
+
+    /*Post Form*/
+    .post-form .form-group-bttns{
+        width: 100% !important;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .post-form .form-group-bttns *{
+        width: 100%;
     }
 }
 

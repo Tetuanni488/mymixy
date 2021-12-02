@@ -12,11 +12,6 @@
     display:flex;
     justify-content:space-between;
 }
-
-.post-item .post-buttons{
-    padding:5px;
-}
-
 .post-item .post-text{
     font-weight:bold;
     color:#a0a0a0 !important;
@@ -27,12 +22,6 @@
     border-radius:10px;
     overflow:auto;
     padding: 10px;
-}
-
-.post-form .input-group-1{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 .post-form .form-group-bttns{
     width: fit-content;

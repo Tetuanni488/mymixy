@@ -15,6 +15,12 @@
     background-color:#ffffff;
 }
 
+/*Display*/
+
+.hidden{
+    display: none;
+}
+
 /* Text */
 
     /* Font size and weight */
@@ -30,6 +36,12 @@
 
 .text-rossa{
     color:#c5214a;
+}
+
+    /* Text align*/
+
+.text-center{
+    text-align: center;
 }
 
 
@@ -54,14 +66,16 @@
 }
 
 .bttn-1{
-    font-size:20px;
     padding:5px;
-    color:#c5214a;
-    transition: all .5s;
+    clip-path: circle(50%);
+    color:#fff;
+    font-size:25px;
     text-decoration: none;
+    transition: all .5s;
 }
 .bttn-1:hover{
-    color:#fff;
+    color:#c5214a;
+    background: white;
 }
 
 .bttn-2{
@@ -256,6 +270,9 @@
 }
 .justify-con-start{
     justify-content: start;
+}
+.justify-con-center{
+    justify-content: center;
 }
 
 .flex-1{

@@ -4,7 +4,7 @@
 {{!-- Recent Posts --}}
 
 
-<div class="flex-1 w-70">
+<div class="flex-1 homesite-content-wrapper">
     <div class="post-form card-2 flex-dir-col w-100">
         <h2 class="tl-1">Create new post</h2>
         <form class="card-2 flex-dir-col" action="/images" method="POST" enctype="multipart/form-data">
@@ -13,9 +13,10 @@
                 <input class="input-1 bg-trans" name="title" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Title here" required>
                 <textarea class="tarea-1 bg-trans" name="description" class="form-control" placeholder="Description here" onkeypress="autoGrow(this)" rows="2"></textarea>
             </div>
-            <div class="form-group-bttns card-2 justify-con-sBetween">
-                <div class="input-group"> 
-                    <input class="bttn bg-trans" type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
+            <div class="form-group-bttns card-2 justify-con-sBetween gap-10">
+                <div class="input-group bttn text-center"> 
+                    <input class="hidden" id="postImg" type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
+                    <label for="postImg">Select max 4 images</label>
                 </div>
                 <button class="bttn">
                     new post
@@ -27,7 +28,7 @@
     <h2 class="tl-1">Recent posts</h2>
     <div class="card-2 flex-dir-col">
         {{#each images}}
-            <div class="card-2 post-content-wrapper postsite-content-wrapper">
+            <div class="card-2 post-content-wrapper postsite-content-wrapper w-100">
                 <div class="post-profile card-2 flex-dir-row justify-con-start gap-10">
                     <img class="post-profile-img" src="https://2wcvjr2o0jc97l6eq1lut4y1-wpengine.netdna-ssl.com/wp-content/uploads/2016/09/no-profile-img.jpg" alt="">
                     <div class="post-details">
@@ -37,13 +38,13 @@
                         <span>{{timestamp}}</span>
                     </div>
                 </div>
-                <div class="br-10 mt-10 p-15 card-2 flex-dir-col gap-10">
+                <div class="br-10 mt-10 p-15 card-2 flex-dir-col gap-10 justify-con-center">
                     <div class="post-content font-w500">
                         <p>{{title}}</p>
                         <p>{{description}}</p> 
                     </div>       
                 </div>
-                <a href="/images/{{uniqueId}}">
+                <a href="/images/{{uniqueId}}" class="align-self-start">
                     <img src="/public/upload/{{filename}}" alt="" style="width: 100%;" class="br-10 w-100">
                 </a>
             </div>
