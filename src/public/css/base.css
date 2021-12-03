@@ -335,7 +335,7 @@
 }
 
 /* Media screen */
-@media screen and (max-width:900px) {
+@media screen and (max-width:800px) {
     .input-1, .tarea-1, .bttn{
         font-size: 15px;
     }
