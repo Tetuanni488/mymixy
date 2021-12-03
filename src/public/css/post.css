@@ -24,5 +24,6 @@
     padding: 10px;
 }
 .post-form .form-group-bttns{
-    width: fit-content;
+    justify-content: flex-end;
+    width: auto;
 }
