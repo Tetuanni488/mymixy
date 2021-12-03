@@ -66,6 +66,9 @@
 }
 
 .bttn-1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
     padding:0;
     clip-path: circle(50%);
     width: 50px;
