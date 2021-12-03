@@ -72,15 +72,15 @@
     font-size: 20px;
     border-radius: 5px;
     padding: 5px;
-    background: #ffffff;
+    background: #c5214a;
     font-weight: bold;
-    color:#c5214a;
+    color:#fff;
     transition: all 0.3s;
 }
 .bttn:hover{
     outline: none;
     border: none;
-    background-color: #a7a7a7;
+    background: #a11d3e;
 }
 
 .bttn-1{
@@ -92,7 +92,7 @@
     align-items: center;
     font-weight: normal;
     justify-content: center;
-    color:rgb(128, 128, 128);
+    color:#808080;
     font-size:25px;
     transition: all .5s;
 }
@@ -101,7 +101,7 @@
 }
 
 .bttn-2{
-    font-size:17px;
+    font-size:20px;
     padding:5px;
     background-color: #c5214a;
     color:#ffff;
@@ -155,11 +155,18 @@
 .p-15{
     padding: 15px;
 }
+.pt-5em{
+    padding-top: 5em;
+}
 
 /* Border */
 
 .br-10{
     border-radius: 10px;
+}
+
+.bc2-rossa{
+    border-bottom: #c52165 solid 2px !important;
 }
 
 /* Card */
@@ -325,7 +332,18 @@
     justify-self: flex-start;
 }
 
-
+/* Media screen */
+@media screen and (max-width:900px) {
+    .input-1, .tarea-1, .bttn{
+        font-size: 15px;
+    }
+    .bttn-1{
+        padding: 10px;
+        font-size: 20px;
+        width: 40px;
+        height:40px;
+    }
+}
 
 input:-webkit-autofill {
     -webkit-text-fill-color: #ffff;
