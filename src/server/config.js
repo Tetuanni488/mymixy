@@ -6,6 +6,7 @@ const multer = require('multer');
 const routes = require('../routes/index')
 const erroHandler = require('errorhandler')
 const errorHandler = require("errorhandler");
+const pjax = require('express-pjax');
 
 
 module.exports = app =>{
@@ -26,9 +27,12 @@ module.exports = app =>{
     //Middlewares   
 
     app.use(morgan('dev'))
-    app.use(multer({dest: path.join(__dirname,'../public/upload/temp')}).single('image'))
+    app.use(multer({
+        dest: path.join(__dirname,'../public/upload/temp')
+    }).array("media",12))
     app.use(express.urlencoded({extended:false}))
     app.use(express.json())
+    app.use(pjax());
 
     //Routes
 

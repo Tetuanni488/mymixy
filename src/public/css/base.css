@@ -69,7 +69,7 @@
 .bttn{
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 17px;
     border-radius: 5px;
     padding: 5px;
     background: #c5214a;
@@ -88,9 +88,7 @@
     justify-content: center;
     align-content: center;
     padding:0;
-    clip-path: circle(50%);
     width: 50px;
-    height:50px;
     align-items: center;
     font-weight: normal;
     justify-content: center;
@@ -154,6 +152,9 @@
 .p-25{
     padding: 25px;
 }
+.p-10{
+    padding: 10px;
+}
 .p-15{
     padding: 15px;
 }
@@ -180,6 +181,9 @@
 }
 .content-flex{
     display: flex;
+}
+.content-gird{
+    display: grid;
 }
 .card-glass{
     backdrop-filter: blur(40px);
@@ -302,18 +306,27 @@
     flex-direction: column-reverse;
 }
 
-.align-itm-center{
-    align-items: center;
-}
-
 .justify-con-sBetween{
     justify-content: space-between;
+}
+.justify-con-sAround{
+    justify-content: space-around;
 }
 .justify-con-start{
     justify-content: start;
 }
 .justify-con-center{
     justify-content: center;
+}
+.justify-self-end{
+    justify-self: flex-end;
+}
+
+.align-itm-center{
+    align-items: center;
+}
+.align-sitem-end{
+    align-self: flex-end;
 }
 
 .flex-1{
@@ -337,7 +350,8 @@
 /* Media screen */
 @media screen and (max-width:800px) {
     .input-1, .tarea-1, .bttn{
-        font-size: 15px;
+        font-size: 12px;
+        padding: 5px;
     }
     .bttn-1{
         padding: 10px;

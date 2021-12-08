@@ -1,60 +1,74 @@
 {{!-- Main home page content --}}
 
-<div class="flex-1 homesite-content-wrapper content-flex flex-dir-col gap-20">
+<div class="container container--pad-20 container--col container--gap-20">
     
     {{!-- Create new post form --}}
     
-    <h2 class="tl-1">Create new post</h2>
-    <div class="post-form content-flex flex-dir-col w-100 br-10 bg2-color">
-        <form class="content-flex flex-dir-col gap-20" action="/images" method="POST" enctype="multipart/form-data">
-            <div class="content-flex flex-dir-col input-group">
-                <input class="input-1 bg-trans" name="author" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Author" autocomplete="off" required>
-                <input class="input-1 bg-trans" name="title" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Title here" autocomplete="off" required>
-                <textarea class="tarea-1 bg-trans bc2-rossa" name="description" class="form-control" placeholder="Description here" onkeypress="autoGrow(this)"  autocomplete="off" rows="2"></textarea>
-            </div>
-            <div class="form-group-bttns content-flex justify-con-sBetween gap-10">
-                <div class="input-group bttn-1 text-center"> 
-                    <input class="hidden" id="postImg" type="file" name="image" class="form-control" id="inputGroup" aria-describedby="inputGroupFileAddon" required>
-                    <label for="postImg"><i class="fas fa-photo-video"></i></label>
+    <h2 class="title-h2">Create new post</h2>
+    <div class="container container--col container--style-2">
+        <form class="form container container--col container--gap-20" action="/posts" method="POST" enctype="multipart/form-data">
+            <main class="form__main container container--col container--gap-20">
+                <input class="form__input" name="author" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Author" autocomplete="off" required>
+                <input class="form__input" name="title" class="form-control" autocapitalize="off" autocorrect="off" placeholder="Title here" autocomplete="off" required>
+                <textarea class="form__text-area form__text-area--border-rosa" name="description" class="form-control" placeholder="Description here" onkeypress="autoGrow(this)"  autocomplete="off" rows="2"></textarea>
+            </main>
+            <footer class="form__footer">
+                <div class="form__input-wrapper button-2"> 
+                    <input class="hidden" id="addMedia" type="file" name="media" class="form-control" id="inputGroup" multiple="multiple" aria-describedby="inputGroupFileAddon" required>
+                    <label for="addMedia"><i class="form__label fas fa-photo-video"></i></label>
                 </div>
-                <button class="bttn">
+                <button class="form__button button" id="postButton">
                     new post
                 </button>
-            </div>
+            </footer>
         </form>
     </div>
 
     {{!-- Show the recent post created --}}
 
-    <h2 class="tl-1">Recent posts</h2>
-    <div class="content-flex flex-dir-col">
-        {{#each images}}
-            <a href="/images/{{uniqueId}}" class="content-flex post-content-wrapper bc2-rossa flex-1 flex-dir-col postsite-content-wrapper w-100">
-                <div class="post-profile content-flex flex-dir-row justify-con-start gap-10">
-                    <img class="profile-img-50" src="https://2wcvjr2o0jc97l6eq1lut4y1-wpengine.netdna-ssl.com/wp-content/uploads/2016/09/no-profile-img.jpg" alt="">
-                    <div class="post-details">
-                        <div class="post-profile-alias">
-                            <span class="text-rossa font-w700">Author: </span>{{author}}
+    <h2 class="title-h2">Recent posts</h2>
+    <div class="container container--col">
+        {{#each posts}}
+            <div class="post-wrapper post--border-rossa post--pad-10 post--hover" data-id="{{uniqueId}}">
+                <header class="post__header">
+                    <img class="post__profile-avatar" src="https://2wcvjr2o0jc97l6eq1lut4y1-wpengine.netdna-ssl.com/wp-content/uploads/2016/09/no-profile-img.jpg" alt="">
+                    <div class="post__header-details">
+                        <div class="post__alias">
+                            <span class="text-rossa font-w700">Author: </span>
+                            <span class="font-w500">{{author}}</span>
                         </div>
-                        <span>{{timestamp}}</span>
+                        <span class="font-w500">{{timeago}}</span>
                     </div>
-                </div>
-                <div class="br-10 mt-10 p-15 content-flex flex-dir-col gap-10 justify-con-center">
-                    <div class="post-content font-w500">
-                        <p>{{title}}</p>
-                        <p>{{description}}</p> 
-                    </div>       
-                </div>
-                <div class="homesite-post-image-wrapper">
-                    <img src="/public/upload/{{filename}}" alt="" style="width: 100%;" class="br-10 w-100 homesite-post-image">
-                </div>
-                <div class="post-bttm-bttns content-flex flex-dir-row gap-20 jsutifiy-con-sBetween font-w500">
+                </header>
+                <main class="post__main-wrapper">
+                    <div class="post__text">
+                        <p class="font-w700">{{title}}</p>
+                        <p class="mt-10">{{description}}</p> 
+                    </div>   
+                    <div class="post__media-wrapper">
+                        {{#each media}}
+                            {{#iftype type}}
+                                <div class="post__media-thumbnail-container" data-ajax="{{../postId}}" value="{{filename}}">
+                                    <img src="/public/upload/media/images/{{filename}}" alt="" class="post__media-image">
+                                </div>
+                            {{else}}
+                                <div class="post__media-thumbnail-container">
+                                    <video class="post__media-video" controls>
+                                        <source src="/public/upload/media/videos/{{filename}}" type="video/mp4">
+                                    </video>
+                                </div>
+                            {{/iftype}}
+                        {{/each}}
+                    </div>    
+                </main>
+                <footer class="post__footer post-bttm-bttns content-flex flex-dir-row gap-20 jsutifiy-con-sBetween mt-10 font-w500">
                     <span class="bttn-1"><i class="far fa-comments"></i></span>
-                    <span class="bttn-1"><i class="far fa-heart"></i></span>
+                    <span class="bttn-1 liekPost" data-ajax="{{postId}}"><i class="far fa-heart"></i>{{likes}}</span>
                     <span class="bttn-1"><i class="fas fa-share-alt"></i></span>
-                </div>
-            </a>
+                </footer>
+            </div>
         {{/each}}
     </div>
+    {{> modalmedia}}
 </div>
 

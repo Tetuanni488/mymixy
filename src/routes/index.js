@@ -1,17 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const home  = require('../controllers/home');
-const image = require('../controllers/image');
+const post = require('../controllers/post');
+const profile = require('../controllers/profile');
 
 module.exports = app =>{
 
     router.get('/', home.index)
-    router.get('/profile', home.profile)
-    router.get('/images/:image_id', image.index)
-    router.post('/images', image.create)
-    router.post('/images/:image_id/like', image.like)
-    router.post('/images/:image_id/comment', image.comment)
-    router.delete('/images/:image_id', image.remove)
+    router.get('/profile', profile.index)
+    router.get('/posts/:post_id', post.index)
+    router.post('/posts', post.create)
+    router.post('/posts/:post_id/like', post.like)
+    router.post('/posts/:post_id/comment', post.comment)
+    router.get('/posts/:post_id/:media_id', post.media)
+    router.delete('/posts/:post_id', post.remove)
 
     app.use(router);
 }

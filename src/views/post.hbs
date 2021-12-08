@@ -1,0 +1,44 @@
+<script src="/public/js/ajax.js"></script>
+<div class="container container--pad-20">
+    <div class="post-wrapper post--border-rossa" data-id="{{uniqueId}}">
+        <header class="post__header">
+            <img class="post__profile-avatar" src="https://2wcvjr2o0jc97l6eq1lut4y1-wpengine.netdna-ssl.com/wp-content/uploads/2016/09/no-profile-img.jpg" alt="">
+            <div class="post__header-details">
+                <div class="post__alias">
+                    <span class="text-rossa font-w700">Author: </span>
+                    <span class="font-w500">{{post.author}}</span>
+                </div>
+                <span class="font-w500">{{post.timeago}}</span>
+            </div>
+        </header>
+        <main class="post__main-wrapper">
+            <div class="post__text">
+                <p class="font-w700">{{post.title}}</p>
+                <p class="mt-10">{{post.description}}</p> 
+            </div>   
+            <div class="post__media-wrapper">
+                {{#each post.media}}
+                    {{#iftype type}}
+                        <div class="post__media-thumbnail-container" data-ajax="{{../post.postId}}" value="{{filename}}">
+                            <img src="/public/upload/media/images/{{filename}}" alt="" class="post__media-image">
+                        </div>
+                    {{else}}
+                        <div class="post__media-thumbnail-container">
+                            <video class="post__media-video" controls>
+                                <source src="/public/upload/media/videos/{{filename}}" type="video/mp4">
+                            </video>
+                        </div>
+                    {{/iftype}}
+                {{/each}}
+            </div>    
+        </main>
+        <footer class="post__footer post-bttm-bttns content-flex flex-dir-row gap-20 jsutifiy-con-sBetween mt-10 font-w500">
+            <span class="bttn-1"><i class="far fa-comments"></i></span>
+            <span class="bttn-1 liekPost" data-ajax="{{post.postId}}"><i class="far fa-heart"></i>{{post.likes}}</span>
+            <span class="bttn-1"><i class="fas fa-share-alt"></i></span>
+        </footer>
+    </div>
+
+    
+    {{> modalmedia}}
+</div>
