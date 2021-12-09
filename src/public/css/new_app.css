@@ -401,7 +401,7 @@
 }
 
 .modal__media-wrapper .modal__button-cross{
-    align-self: flex-start;
+    align-self: center;
     background: transparent;    
 }
 .modal__media-wrapper .modal__button-cross:hover{
