@@ -342,7 +342,6 @@
     width: 5em;
     min-width: 60px;
     height: auto;
-    padding-bottom: 0.5em;
     border: var(--bg-color-2) solid 5px;
     border-radius: 50%;
     
@@ -392,13 +391,11 @@
     display: flex;
     justify-content: center;
     padding: 15px;
-    object-fit:10;
 }
 
 .modal__media-thumbnail .modal__media-image{
     max-width: 100%;
     max-height: 100%;
-    object-fit:cover;
 }
 
 .modal__media-wrapper .modal__button-cross{
