@@ -380,30 +380,30 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     padding: 10px;
-    transform: translate(-50%,-50%);
     background-color:var(--bg-color-2-05);
 }
 
+.modal__media-thumbnail{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    object-fit:10;
+}
+
 .modal__media-thumbnail .modal__media-image{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%,-50%);
-    max-width: 50em;
-    align-self: center;
-    justify-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:cover;
 }
 
 .modal__media-wrapper .modal__button-cross{
-    background: transparent;
-    position: absolute;
     align-self: flex-end;
+    background: transparent;    
 }
 .modal__media-wrapper .modal__button-cross:hover{
     color: var(--bg-color-2);
