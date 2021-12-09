@@ -377,7 +377,7 @@
 
 .modal__media-wrapper{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     position: fixed;
     top: 0;
     left: 0;
@@ -390,7 +390,9 @@
 .modal__media-thumbnail{
     display: flex;
     justify-content: center;
-    padding: 15px;
+    align-items: flex-start;
+    padding: 25px;
+    width: 100%;
 }
 
 .modal__media-thumbnail .modal__media-image{
@@ -399,7 +401,7 @@
 }
 
 .modal__media-wrapper .modal__button-cross{
-    align-self: flex-end;
+    align-self: flex-start;
     background: transparent;    
 }
 .modal__media-wrapper .modal__button-cross:hover{
