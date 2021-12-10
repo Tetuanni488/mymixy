@@ -47,16 +47,18 @@ $(document).ready(function(){
         let subwrarpper1 = [];
         let subwrarpper2 = [];
         let length = $(this).data("lentgh")
-        $(this).find(".post__media-thumbnail-container").each(function (index) {
-            if(length ==2){
+        $(this).find(".post__media-thumbnail-container").each(function (index) {                       
+            if(length <=2){
                 if (index === 0){
                     subwrarpper1.push({
                         filename: $(this).attr("value"),
+                        type: $(this).data("type"),
                         pId: $(this).data("ajax")
                     })
                 }else{
                     subwrarpper2.push({
                         filename: $(this).attr("value"),
+                        type: $(this).data("type"),
                         pId: $(this).data("ajax")
                     })
                 }
@@ -64,11 +66,13 @@ $(document).ready(function(){
                 if (index <=1){
                     subwrarpper1.push({
                         filename: $(this).attr("value"),
+                        type: $(this).data("type"),
                         pId: $(this).data("ajax")
                     })
                 }else{
                     subwrarpper2.push({
                         filename: $(this).attr("value"),
+                        type: $(this).data("type"),
                         pId: $(this).data("ajax")
                     })
                 }
@@ -78,22 +82,45 @@ $(document).ready(function(){
         if (subwrarpper1.length >0){
             $(this).append('<div class="post__media-subwrapper" id="subwrarpper1"></div>');
             subwrarpper1.forEach(element => {
-                $(this).find("#subwrarpper1").append('\
-                <div class="post__media-thumbnail-container" data-ajax="'+element.pId+'" value="'+element.filename+'">\
-                    <img src="/public/upload/media/images/'+element.filename+'" alt="" class="post__media-image">\
-                </div>\
-                ');
+                if(element.type === "image"){
+                    $(this).find("#subwrarpper1").append('\
+                    <div class="post__media-thumbnail-container" data-ajax="'+element.pId+'" value="'+element.filename+'">\
+                        <img src="/public/upload/media/images/'+element.filename+'" alt="" class="post__media-image">\
+                    </div>\
+                    ')
+                }else{
+                    $(this).find("#subwrarpper1").append('\
+                    <div class="post__media-thumbnail-container" data-ajax="'+element.pId+'" value="'+element.filename+'">\
+                        <video class="post__media-video" controls>\
+                            <source class="post__media-image" src="/public/upload/media/videos/'+element.filename+'" type="video/mp4">\
+                        </video>\
+                    </div>\
+                    ')
+                }
             });
+            if(subwrarpper2.length ===0){
+                $(this).find("#subwrarpper1").addClass("post__media--fullsize")
+                $(this).find("#subwrarpper1").find(".post__media-thumbnail-container").addClass("post__media--fullsize")
+            }
         }
-        console.log($(this).html())
         if (subwrarpper2.length >0){
             $(this).append('<div class="post__media-subwrapper" id="subwrarpper2"></div>');
             subwrarpper2.forEach(element => {
-                $(this).find("#subwrarpper2").append('\
-                <div class="post__media-thumbnail-container" data-ajax="'+element.pId+'" value="'+element.filename+'">\
-                    <img src="/public/upload/media/images/'+element.filename+'" alt="" class="post__media-image">\
-                </div>\
-                ');
+                if(element.type === "image"){
+                    $(this).find("#subwrarpper2").append('\
+                    <div class="post__media-thumbnail-container" data-ajax="'+element.pId+'" value="'+element.filename+'">\
+                        <img src="/public/upload/media/images/'+element.filename+'" alt="" class="post__media-image">\
+                    </div>\
+                    ')
+                }else{
+                    $(this).find("#subwrarpper2").append('\
+                    <div class="post__media-thumbnail-container" data-ajax="'+element.pId+'" value="'+element.filename+'">\
+                        <video class="post__media-video" controls>\
+                            <source class="post__media-image" src="/public/upload/media/videos/'+element.filename+'" type="video/mp4">\
+                        </video>\
+                    </div>\
+                    ')
+                }
             });
         }
     });
@@ -103,7 +130,17 @@ $(document).ready(function(){
         event.stopPropagation()
         const filename = $(this).attr("value");
         $(".modal__media").show();
-        $(".modal__media").find("img").attr("src", "/public/upload/media/images/" + filename);
+        if(filename.substr(filename.length-3,filename.length)!=="mp4"){
+            $(".modal__media-thumbnail").html('\
+            <img src="/public/upload/media/images/'+filename+'" alt="" class="modal__media-image">\
+            ')
+        }else{
+            $(".modal__media-thumbnail").html('\
+            <video controls>\
+                <source src="/public/upload/media/videos/'+filename+'" type="video/mp4">\
+            </video>\
+            ')
+        }
     });
 
     //Close modal

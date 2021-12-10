@@ -9,6 +9,7 @@
     display: flex;
     flex: 1;
     flex-direction: row;
+    gap: 10px;
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 5em;
@@ -18,7 +19,7 @@
     .main-wrapper{
         margin: 0px;
         flex-direction: column;
-        padding: unset;
+        padding: 10px;
         padding-bottom: 5em;
         font-size: 12px;
     }
@@ -44,10 +45,7 @@
 .container--gap-10{
     gap: 10px;
 }
-.container--pad-20{
-    padding: 20px;
-}
-.container--pad-20{
+.container--pad-10{
     padding: 10px;
 }
 .container--left-content{
@@ -204,13 +202,13 @@
 .post__main-wrapper{
     display:flex;
     flex-direction: column;
-    gap:10px;
+    gap:.5em;
     padding: 10px;
 }
 .post__text{
     display:flex;
     flex-direction: column;
-    gap: 10;
+    gap: .5em;
     padding: 15px;
     margin-top: 10px;
 }
@@ -230,6 +228,12 @@
     min-width: 50%;
     height: 100%;
     margin-right: 2px;
+    
+}
+
+.post__media--fullsize{
+    width: 100%;
+    flex-basis: 100%;
 }
 
 .post__media-thumbnail-container{
@@ -313,7 +317,6 @@
 
 .profile__header{
     width: 100%;
-    padding: 10px;
     border-radius: 10px;
 }
 .profile__header .profile__banner{

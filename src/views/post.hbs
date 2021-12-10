@@ -8,7 +8,7 @@
                     <span class="text-rossa font-w700">Author: </span>
                     <span class="font-w500">{{post.author}}</span>
                 </div>
-                <span class="font-w500">{{post.timeago}}</span>
+                <span class="font-w500">{{timeago}}</span>
             </div>
         </header>
         <main class="post__main-wrapper">
@@ -19,11 +19,11 @@
             <div class="post__media-wrapper" data-lentgh="{{post.media.length}}">
                 {{#each post.media}}
                     {{#iftype type}}
-                        <div class="post__media-thumbnail-container" data-ajax="{{../post.postId}}" value="{{filename}}">
+                        <div class="post__media-thumbnail-container" data-ajax="{{../post.postId}}" data-type="{{type}}" value="{{filename}}">
                             <img src="/public/upload/media/images/{{filename}}" alt="" class="post__media-image">
                         </div>
                     {{else}}
-                        <div class="post__media-thumbnail-container">
+                        <div class="post__media-thumbnail-container" data-ajax="{{../post.postId}}" data-type="{{type}}" value="{{filename}}">
                             <video class="post__media-video" controls>
                                 <source src="/public/upload/media/videos/{{filename}}" type="video/mp4">
                             </video>
