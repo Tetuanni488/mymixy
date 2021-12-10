@@ -16,7 +16,7 @@
                 <p class="font-w700">{{post.title}}</p>
                 <p class="mt-10">{{post.description}}</p> 
             </div>   
-            <div class="post__media-wrapper">
+            <div class="post__media-wrapper" data-lentgh="{{post.media.length}}">
                 {{#each post.media}}
                     {{#iftype type}}
                         <div class="post__media-thumbnail-container" data-ajax="{{../post.postId}}" value="{{filename}}">
